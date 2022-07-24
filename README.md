@@ -30,3 +30,4 @@ Please make sure that Port _5432_ is available for PgSQL and port _8000_, _8001_
 ## Question
 
 After all the services running properly, give us some PoW(Proof of Work) / PoC(Proof of Concept) The way you running automation test on this services.
+Please make a list of all the scenario that you tested on the service.
