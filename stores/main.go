@@ -56,7 +56,7 @@ func setupDatabase() *gorm.DB {
 		"host.docker.internal",
 		"postgres",
 		"postgres",
-		"warpin_assesment",
+		"ais-qa-assesment",
 		"5432",
 		// os.Getenv("DATABASE_HOST"),
 		// os.Getenv("DATABASE_USERNAME"),

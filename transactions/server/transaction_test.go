@@ -50,7 +50,7 @@ func setupDatabase() *gorm.DB {
 		"localhost",
 		"postgres",
 		"postgres",
-		"warpin_assesment",
+		"ais-qa-assesment",
 		"5432",
 	)
 
