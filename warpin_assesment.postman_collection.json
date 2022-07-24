@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "5ed41f67-5603-4496-afd7-446cec70c818",
+		"name": "warpin_assesment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "17233654"
+	},
+	"item": [
+		{
+			"name": "Store",
+			"item": [
+				{
+					"name": "Get Store",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8003/stores/get_store/1"
+					},
+					"response": []
+				},
+				{
+					"name": "List Stores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8003/stores/list_stores"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Store By Product ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8003/stores/get_store_by_product_id/2"
+					},
+					"response": []
+				},
+				{
+					"name": "Add Store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Store\": {\r\n        \"storeName\": \"Name Toko\",\r\n        \"phone\": \"021-555-5555\",\r\n        \"email\": \"email@email.com\",\r\n        \"address\": \"Jl. jalanan Blok B-1 No. 1\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/stores/add_store"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Store",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Store\": {\r\n        \"id\": \"2\",\r\n        \"storeName\": \"Name Toko\",\r\n        \"phone\": \"021-555-5555\",\r\n        \"email\": \"email@email.com\",\r\n        \"address\": \"Jl. jalanan Blok B-1 No. 1\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8003/stores/update_store"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Get Product By Transaction ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8004/products/get_product_by_transaction_id/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8004/products/get_product/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Add Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Product\": {\r\n        \"storeId\": \"10\",\r\n        \"productName\": \"Minuman\",\r\n        \"quantity\": \"0\",\r\n        \"price\": \"10000\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8004/products/add_product"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Product\": {\r\n        \"id\": \"1\",\r\n        \"storeId\": \"1\",\r\n        \"productName\": \"Minuman\",\r\n        \"quantity\": \"10\",\r\n        \"price\": \"10000\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8004/products/update_product"
+					},
+					"response": []
+				},
+				{
+					"name": "List Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8004/products/list_products"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transaction",
+			"item": [
+				{
+					"name": "Get Transaction",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8005/transactions/get_transaction/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Add Transaction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Transaction\": {\r\n        \"productId\": \"1\",\r\n        \"quantity\": \"2\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8005/transactions/add_transaction"
+					},
+					"response": []
+				},
+				{
+					"name": "List Transactions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8005/transactions/list_transactions"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

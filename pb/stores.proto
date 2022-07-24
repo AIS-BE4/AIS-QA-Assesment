@@ -1,0 +1,89 @@
+syntax = "proto3";
+
+package pb;
+
+option go_package = "./;pb";
+
+import "google/api/annotations.proto";
+
+service storesAPI {
+  // Get all stores
+  rpc ListStores(ListStoresRequest) returns (ListStoresResponse) {
+    option (google.api.http) = {
+      get: "/stores/list_stores"
+    };
+  };
+  // Get store by product id
+  rpc GetStoreByProductId(GetStoreByProductIdRequest) returns (GetStoreByProductIdResponse) {
+    option (google.api.http) = {
+      get: "/stores/get_store_by_product_id/{id}"
+    };
+  };
+  // Get store by id.
+  rpc GetStore(GetStoreRequest) returns (GetStoreResponse) {
+    option (google.api.http) = {
+      get: "/stores/get_store/{id}"
+    };
+  };
+  // Add new store.
+  rpc AddStore(AddStoreRequest) returns (AddStoreResponse) {
+    option (google.api.http) = {
+      post: "/stores/add_store"
+      body: "*"
+    };
+  };
+  // Update store.
+  rpc UpdateStore(UpdateStoreRequest) returns (UpdateStoreResponse) {
+    option (google.api.http) = {
+      put: "/stores/update_store"
+      body: "*"
+    };
+  };;
+}
+
+message ListStoresRequest {
+}
+
+message ListStoresResponse {
+  repeated Store stores = 1;
+}
+
+message GetStoreByProductIdRequest {
+  uint64 id = 1;
+}
+
+message GetStoreByProductIdResponse {
+  Store Store = 1;
+}
+
+message GetStoreRequest {
+  uint64 id = 1;
+}
+
+message GetStoreResponse {
+  Store Store = 1;
+}
+
+message AddStoreRequest {
+  Store Store = 1;
+}
+
+message AddStoreResponse {
+  Store Store = 1;
+}
+
+message UpdateStoreRequest {
+  Store Store = 1;
+}
+
+message UpdateStoreResponse {
+  Store Store = 1;
+}
+
+message Store {
+  uint64 id = 1;
+  string store_name = 2;
+  string phone = 3;
+  string email = 4;
+  string address = 5;
+}
