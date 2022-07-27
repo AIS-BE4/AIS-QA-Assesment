@@ -2,6 +2,19 @@
 # AIS QA ASSESMENT
 
 
+## Setup Database
+
+Make Sure you already install docker first before you doing this test
+
+Go to folder ```pg-docker``` using this command: ```cd pg-docker```
+
+Then Run ```docker-compose up -d```
+
+NOTE:
+
+```To Check the database you can use any database client(such as pgAdmin / Navicat), then connect to host: localhost || username: postgres || password: postgres || port: 5435 || initial datbase: postgres```
+
+
 ## Preparation: Running Service
 
 Make Sure you already install docker first before you doing this test

@@ -1,0 +1,45 @@
+version: '3.1'
+services:
+  db:
+    image: postgres:12.3-alpine
+    environment:
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - 5435:5432
+  # db:
+  #   image: mysql:5.6
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: toor
+  # mongo:
+  #   image: mongo:4.2
+  #   command: mongod
+  #   environment:
+  #     MONGO_INITDB_ROOT_USERNAME: root
+  #     MONGO_INITDB_ROOT_PASSWORD: rootMongod
+  #   ports:
+  #     - 27017:27017
+  # redis:
+  #   image: redis:6.0
+  #   command: redis-cli
+  # pgadmin:
+  #   image: dpage/pgadmin4:4.21
+  #   environment:
+  #     PGADMIN_DEFAULT_EMAIL: claudio@hacktiv8.testing.com
+  #     PGADMIN_DEFAULT_PASSWORD: postgres
+  #   ports:
+  #     - 8081:80
+  adminer:
+    image: adminer:4.7.7-standalone
+    ports:
+      - 8085:8085
+
+  # mongo-express:
+  #   image: mongo-express
+  #   restart: always
+  #   ports:
+  #     - 8082:8081
+  #   environment:
+  #     ME_CONFIG_MONGODB_ADMINUSERNAME: root
+  #     ME_CONFIG_MONGODB_ADMINPASSWORD: rootMongod
+# docker-compose up -d // use to run this compose(access from the current dir)
+#docker-compose down -v // delete
