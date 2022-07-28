@@ -38,8 +38,6 @@ Re-run The Container using this command below:
 
 ```exit```
 
-```docker compose down -v```
-
 ```docker compose up -d```
 
 Please make sure that Port _5432_ is available for PgSQL and port _8000_, _8001_, _8002_, _8003_, _8004_ and _8005_ are available
