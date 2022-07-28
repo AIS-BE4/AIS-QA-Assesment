@@ -3,7 +3,7 @@
     "username": "postgres",
     "password": "postgres",
     "database": "ais-qa-assesment",
-    "host": "host.docker.internal",
+    "host": "host.internal.docker",
     "dialect": "postgres"
   },
   "test": {
